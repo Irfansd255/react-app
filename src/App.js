@@ -1,12 +1,11 @@
+import Login from "./pages/Login";
 
-import Button from './components/Button';
-import CardComp from './components/CardComp'
 
 function App() {
   return (
     <div className="App">
-      <CardComp />
-      <Button/>
+      <Login/>
+      <hr />
     </div>
   );
 }
