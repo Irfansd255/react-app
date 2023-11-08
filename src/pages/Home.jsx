@@ -38,20 +38,18 @@ const Home = () => {
         </Navbar>
       </header>
 
-      <div className="row">
-        <div className="col-3">
-          <CardCom/>
+      <div className="row ">
+        <div className="col-3 mt-4">
+          <CardCom myname="Irfan" age="25" inputType="text" />
         </div>
-        <div className="col-3">
-        <CardCom/>
-
+        <div className="col-3 mt-4">
+          <CardCom myname="zubair" age="30" inputType="date" />
         </div>
-        <div className="col-3">
-        <CardCom/>
-
-        </div><div className="col-3">
-        <CardCom/>
-
+        <div className="col-3 mt-4">
+          <CardCom myname="sohel" age="40" btnName="Login" inputType="number" />
+        </div>
+        <div className="col-3 mt-4">
+          <CardCom myname="zain" age="28" inputType="password" />
         </div>
       </div>
     </div>

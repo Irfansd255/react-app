@@ -1,19 +1,16 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import ButtonComp from "./ButtonComp";
 
-const CardCom = () => {
+const CardCom = ({ myname, age, btnName, inputType }) => {
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+      <Card>
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <h4>Name:{myname}</h4>
+          <h4>Age:{age}</h4>
+          <button className="btn btn-primary w-100 mt-3">{btnName}</button>
+          <input type={inputType} className="form-control mt-3"/>
         </Card.Body>
       </Card>
     </div>
