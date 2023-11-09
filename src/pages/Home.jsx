@@ -37,10 +37,9 @@ const Home = () => {
           </Container>
         </Navbar>
       </header>
-
       <div className="row ">
         <div className="col-3 mt-4">
-          <CardCom myname="Irfan" age="25" inputType="text" />
+          <CardCom myname="irfan" age="25" inputType="text" />
         </div>
         <div className="col-3 mt-4">
           <CardCom myname="zubair" age="30" inputType="date" />
