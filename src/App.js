@@ -1,6 +1,7 @@
 import Login from "./pages/Login";
 import "./style/style.css";
 import Home from "./pages/Home";
+import StatePage from "./pages/StatePage";
 
 function App() {
   
@@ -8,7 +9,9 @@ function App() {
   return (
     <div className="App">
       {/* <Login/> */}
-      <Home  />
+      {/* <Home  /> */}
+      <StatePage/>
+    
     </div>
   );
 }

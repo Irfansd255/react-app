@@ -6,8 +6,16 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import CardCom from "../components/CardCom";
+import Person from "../components/Person";
 
 const Home = () => {
+
+const user ={
+  uname:"irfan",
+  age:"27",
+  married:false
+}
+
   return (
     <div className="container header-wrapper">
       <header>
@@ -39,18 +47,21 @@ const Home = () => {
       </header>
       <div className="row ">
         <div className="col-3 mt-4">
-          <CardCom myname="irfan" age="25" inputType="text" />
+          <CardCom myname="irfan" age="25" inputType="text" btnColor="btn-danger"  />
         </div>
         <div className="col-3 mt-4">
-          <CardCom myname="zubair" age="30" inputType="date" />
+          <CardCom myname="zubair" age="30" inputType="date" btnColor="btn-success" />
         </div>
         <div className="col-3 mt-4">
-          <CardCom myname="sohel" age="40" btnName="Login" inputType="number" />
+          <CardCom myname="sohel" age="40" btnName="Login" inputType="number" btnColor="btn-secondary" />
         </div>
         <div className="col-3 mt-4">
-          <CardCom myname="zain" age="28" inputType="password" />
+          <CardCom myname="zain" age="28" inputType="password" btnColor="btn-info"/>
         </div>
       </div>
+      <hr />
+      <Person person={user} />
+
     </div>
   );
 };
