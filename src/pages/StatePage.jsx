@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import Data from "../components/Data";
+import Image from '../images/calculator.png'
+
 
 const StatePage = () => {
+
+  
   // const [state, setState] = useState(0);
 
   // const changeState = () => {
@@ -27,6 +32,7 @@ const StatePage = () => {
         </p>
       )}
 
+
       <button
         className={isShow ? "btn btn-success me-4" : "btn btn-danger me-4"}
         onClick={handleShow}
@@ -42,6 +48,7 @@ const StatePage = () => {
       <button className="btn btn-danger" onClick={() => setState(state - 1)}>
         Decrement
       </button> */}
+
     </div>
   );
 };
