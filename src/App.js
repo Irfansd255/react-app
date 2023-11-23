@@ -5,6 +5,8 @@ import StatePage from "./pages/StatePage";
 import StateObj from "./pages/StateObj";
 import PracticeState from "./pages/PracticeState";
 import FormHandling from "./pages/FormHandling";
+import FormWithMultipleInputs from "./pages/FormWithMultipleInputs";
+import WorkingWithCheckBox from "./pages/WorkingWithCheckBox";
 
 function App() {
   return (
@@ -17,7 +19,11 @@ function App() {
       
       {/* <PracticeState/> */}
 
-      <FormHandling/>
+      {/* <FormHandling/> */}
+
+      {/* <FormWithMultipleInputs/> */}
+
+      <WorkingWithCheckBox/>
     </div>
   );
 }
