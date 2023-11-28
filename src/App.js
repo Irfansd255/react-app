@@ -7,6 +7,7 @@ import Product from "./pages/Product";
 import AboutUs from "./pages/AboutUs";
 import { Route, Routes, useLocation } from "react-router-dom";
 import PageNotFound from "./pages/PageNotFound";
+import SignUp from "./pages/SignUp";
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Login />} />
-
+        <Route path ="/signup" element={<SignUp/>}/>
         <Route path="/home" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/about" element={<AboutUs />} />
