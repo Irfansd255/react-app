@@ -18,13 +18,18 @@ function SignUp() {
     setValidated(true);
   };
 
-  
+  const [uname, setUname] = useState("");
+  const [email, setemail] = useState("");
+
+  const handleSubmitData = (e) => {
+    e.preventDefault();
+    localStorage.setItem("name", uname);
+    localStorage.setItem("email", email);
+  };
 
   return (
     <div className="container p-4">
-      
-
-      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+      {/* <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group as={Col} md="4" controlId="validationCustom01">
             <Form.Label>First name</Form.Label>
@@ -86,10 +91,39 @@ function SignUp() {
           />
         </Form.Group>
         <Button type="submit">Submit form</Button>
-      </Form>
+      </Form> */}
+
+      <div className="container w-50">
+        <h1>Sign Up</h1>
+        <br />
+        <form onSubmit={handleSubmitData}>
+          <label htmlFor="" className="form-label">
+            User Name
+          </label>
+          <input
+            type="text"
+            className="form-control mb-4"
+            value={uname}
+            onChange={(e) => setUname(e.target.value)}
+          />
+
+          <label htmlFor="" className="form-label">
+            User Email
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            value={email}
+            onChange={(e) => setemail(e.target.value)}
+          />
+          <br />
+          <button type="submit" className="btn btn-primary mt-4 me-5">
+            Sing up
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
 
-export default SignUp
-
+export default SignUp;

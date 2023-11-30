@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       {
-        currentRoute !== "/" && <Header /> 
+        currentRoute !== "/" && currentRoute !== '/signup' ? <Header /> : <></> 
       }
       
 
