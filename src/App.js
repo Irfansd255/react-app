@@ -8,6 +8,7 @@ import AboutUs from "./pages/AboutUs";
 import { Route, Routes, useLocation } from "react-router-dom";
 import PageNotFound from "./pages/PageNotFound";
 import SignUp from "./pages/SignUp";
+import ApiFetch from "./pages/ApiFetch";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path= '/ApiFetch' element={<ApiFetch/>}/>
       </Routes>
     </div>
   );
