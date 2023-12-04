@@ -9,6 +9,9 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import PageNotFound from "./pages/PageNotFound";
 import SignUp from "./pages/SignUp";
 import ApiFetch from "./pages/ApiFetch";
+import Pducts from "./pages/Pducts";
+import ApiPost from "./pages/ApiPost";
+import ApiFetchAxios from "./pages/ApiFetchAxios";
 
 function App() {
 
@@ -35,6 +38,14 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path= '/ApiFetch' element={<ApiFetch/>}/>
+        <Route path= '/Pducts' element={<Pducts/>}/>
+        <Route path= '/ApiPost' element={<ApiPost/>}/>
+        <Route path= '/ApiFetchAxios' element={<ApiFetchAxios/>}/>
+
+
+        
+
+        
       </Routes>
     </div>
   );

@@ -19,7 +19,7 @@ const ApiFetch = () => {
 
   const fetchDataAsync = async () => {
     try {
-      const res = await fetch("https://jsonplaceholder.typicode.com/post");
+      const res = await fetch("https://fakestoreapi.com/products");
       if(!res.ok){
         throw new Error('Api Failed...')
       }
