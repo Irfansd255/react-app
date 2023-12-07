@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 const AddData = () => {
   const navigate = useNavigate();
 
-  const baseURL = "https://6548ff4ddd8ebcd4ab2404f4.mockapi.io/crud";
+  const baseURL = "https://6548ff4ddd8ebcd4ab2404f4.mockapi.io/crudapi";
 
   const [data, setData] = useState({
     name: "",
@@ -36,13 +36,17 @@ const AddData = () => {
       })
       .then((res) => {
         toast.success("Successfully Added");
-        
+
         setData({
           name: "",
           mobile: "",
           email: "",
           address: ""
         });
+
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
 
         console.log(res);
       });
