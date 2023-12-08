@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ViewData/>}/>
           <Route path="/AddData" element={<AddData/>}/>
-          <Route path="/EditData" element={<EditData/>}/>
+          <Route path="/EditData/:id" element={<EditData/>}/>
 
         </Routes>
       </div>
