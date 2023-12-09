@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { useContext } from 'react';
 import './App.css';
+import CompA from './Components/CompA';
+import Home from './pages/Home';
+import { AppContext } from './contextApi/AppContext';
+
+const name = 'irfan'
 
 function App() {
+
+  const {counter} = useContext(AppContext)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <h1>Conter {counter}</h1>
+
+      <CompA a={name} />
+      <hr />
+      <Home/>
+      <hr />
     </div>
   );
 }
