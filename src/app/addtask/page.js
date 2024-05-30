@@ -10,13 +10,15 @@ const Page = () => {
   const [title, setTitle] = useState("");
   const [completed, setCompleted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
   const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!title.trim()) {
-      toast.error("Task title cannot be empty");
+      setError("Task title is required");
       return;
     }
 
@@ -52,6 +54,7 @@ const Page = () => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
+          {error && <p className="text-red-500 text-xs italic mb-4">{error}</p>}
           <div className="flex mb-4 items-center">
             <input
               type="checkbox"

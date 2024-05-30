@@ -8,9 +8,11 @@ const Page = ({ params }) => {
   const [title, setTitle] = useState("");
   const [completed, setCompleted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const router = useRouter();
   const id = params.taskid;
   console.log(id);
+  
   useEffect(() => {
     if (id) {
       fetchTaskDetails(id);
@@ -31,6 +33,11 @@ const Page = ({ params }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
+    if (!title.trim()) {
+      setError("Task title is required");
+      return;
+    }
     setLoading(true);
     try {
       const taskData = { title, completed };
@@ -64,12 +71,13 @@ const Page = ({ params }) => {
         <hr />
         <form onSubmit={handleSubmit}>
           <input
-            className="shadow mt-4 appearance-none mb-4 border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow mt-4 appearance-none mb-2 border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Task Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
+          {error && <p className="text-red-500 text-xs italic mb-4">{error}</p>}
           <div className="flex mb-4 items-center">
             <input
               type="checkbox"
